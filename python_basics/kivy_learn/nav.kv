@@ -1,0 +1,31 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+
+BoxLayout:
+    orientation: 'vertical'
+    Toolbar:
+        id: toolbar
+        title: 'Welcome'
+        background_color: app_theme_cls.primary_dark
+        left_action_items: [['more-vert', lambda x: app.raised_button.open(self.parent)]]
+    Label:
+
+<Navigator>:
+    MDNavigationDrawerIconButton:
+        icon: 'face'
+        text: 'Kuldeep Singh'
+    MDNavigationDrawerIconButton:
+        icon: 'email'
+        text: 'kuldeepbb.grewal@gmail.com'
+        on_release: app.root.ids.scr_mngr.current = 'bottomsheet'
+    MDNavigationDrawerIconButton:
+        icon: 'phone'
+        text: '123453242'
+    MDNavigationDrawerIconButton:
+        icon: 'cake'
+        text: '26/11/1994'
+    MDNavigationDrawerIconButton:
+        icon: 'city-alt'
+        text: 'Rohtak'
+    MDNavigationDrawerIconButton:
+        icon: 'settings'
+        text: Settings
