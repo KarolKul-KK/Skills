@@ -3,7 +3,7 @@ import sqlite3
 def login():
     while True:
         username = input("Please enter your name: ")
-        password = input("Please enter your password")
+        password = input("Please enter your password: ")
         with sqlite3.connect("sqldatabase.db") as db:
             cursor = db.cursor()
         find_user = ("SELECT * FROM students WHERE name = ? AND password = ?")
@@ -12,8 +12,7 @@ def login():
 
         if results:
             for i in results:
-                print("Welcome "+i[2])
-            #return("exit")
+                print("Welcome ")
                 break
 
         else:
@@ -22,6 +21,5 @@ def login():
             if again.lower() == "n":
                 print("Good Bye")
                 time.sleep(1)
-                #return("exit")
 
 login()
