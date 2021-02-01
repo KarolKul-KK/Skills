@@ -6,7 +6,7 @@ c = conn.cursor()
 
 
 def read_from_db():
-    c.execute("SELECT email, password FROM students")
+    c.execute("SELECT name, password FROM usernames")
     data = c.fetchall()
     print(data)
     #for row in c.fetchall():
