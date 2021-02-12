@@ -26,7 +26,7 @@ rice <- rice %>%
     )
 
 max(rice[, 3])
-price_poland <-ggplot(data=rice[, 3], aes(x=colnames(rice[, 3])), y=rice[, 3])) +
+price_poland <-ggplot(data=rice[, 3], aes(x=colnames(rice[, 3])), y=rice[, 3]) +
   geom_bar(stat="identity")
 price_poland
 
