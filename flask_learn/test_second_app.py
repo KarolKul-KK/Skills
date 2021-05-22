@@ -10,6 +10,6 @@ def hello(name):
     return f"Hello, {escape(name)}!"
 
 def test_hello():
-    with app.test_request_context('/?name=Peter'):
+    with app.test_request_context('/?name=Karol'):
         assert flask.request.path == '/'
-        assert flask.request.args['name'] == 'Peter'
+        assert flask.request.args['name'] == 'Karol'
