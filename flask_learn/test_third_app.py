@@ -22,4 +22,4 @@ def test_index():
 def test_hello():
     with app.test_request_context('/hello'):
         assert flask.request.path == '/hello'
-        assert test_hello() == 'Hello World'
+        assert hello() == 'Hello World'
